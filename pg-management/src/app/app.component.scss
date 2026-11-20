@@ -1,0 +1,67 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.quick-link {
+  font-size: 13px;
+  &.dues-link {
+    color: #ffcdd2;
+  }
+}
+
+.sidenav-container {
+  flex: 1;
+  height: calc(100vh - 64px);
+}
+
+.sidenav {
+  width: 240px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+.active-link {
+  background-color: rgba(25, 118, 210, 0.12) !important;
+  color: #1976d2 !important;
+  font-weight: 600 !important;
+
+  mat-icon {
+    color: #1976d2 !important;
+  }
+}
+
+.warn-icon {
+  color: #d32f2f !important;
+}
+
+.main-content {
+  background-color: #f4f6f9;
+  min-height: 100%;
+  overflow-y: auto;
+}

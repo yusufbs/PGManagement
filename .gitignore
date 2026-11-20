@@ -1,0 +1,33 @@
+# Build & Output
+bin/
+obj/
+dist/
+out/
+.angular/
+node_modules/
+
+# IDE & Editor
+.vs/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs & temp
+*.log
+logs/
+*.tmp
+
+# Environment & secrets
+*.env
+appsettings.Production.json
+appsettings.*.local.json
+
+# OS files
+.DS_Store
+Thumbs.db

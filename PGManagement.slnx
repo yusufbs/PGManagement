@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PGManagement.API/PGManagement.API.csproj" />
+    <Project Path="src/PGManagement.Application/PGManagement.Application.csproj" />
+    <Project Path="src/PGManagement.Contracts/PGManagement.Contracts.csproj" />
+    <Project Path="src/PGManagement.Domain/PGManagement.Domain.csproj" />
+    <Project Path="src/PGManagement.Infrastructure/PGManagement.Infrastructure.csproj" />
+  </Folder>
+</Solution>

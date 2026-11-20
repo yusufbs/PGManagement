@@ -1,0 +1,29 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Status utility styles */
+.status-available {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.status-occupied {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.status-maintenance {
+  color: #f57f17;
+  font-weight: 600;
+}
