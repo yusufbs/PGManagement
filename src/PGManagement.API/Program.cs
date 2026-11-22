@@ -131,12 +131,6 @@ builder.Services.AddHealthChecks()
     .AddSqlServer(connStr, name: "sqlserver", tags: ["ready", "db"])
     .AddRedis(redisConn, name: "redis", tags: ["ready", "cache"]);
 
-builder.Services.AddHealthChecksUI(setup =>
-{
-    setup.SetEvaluationTimeInSeconds(30);
-    setup.AddHealthCheckEndpoint("PG Management API", "/health/ready");
-}).AddInMemoryStorage();
-
 // 9. OpenTelemetry Tracing & Metrics
 var otlpEndpoint = builder.Configuration.GetSection("OpenTelemetry")["OtlpEndpoint"] ?? "http://localhost:4317";
 builder.Services.AddOpenTelemetry()
@@ -210,8 +204,6 @@ app.MapHealthChecks("/health/ready", new HealthCheckOptions
     Predicate = check => check.Tags.Contains("ready"),
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-
-app.MapHealthChecksUI(options => options.UIPath = "/health/ui");
 
 // Prometheus metrics endpoint
 app.UseMetricServer("/metrics");

@@ -8,6 +8,11 @@ GO
 USE PGManagementDb;
 GO
 
+SET ANSI_NULLS ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+
 -- 1. Rooms Table
 IF OBJECT_ID('dbo.Rooms', 'U') IS NULL
 BEGIN
@@ -71,6 +76,11 @@ END
 GO
 
 -- 4. Bills Table
+SET ANSI_NULLS ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+
 IF OBJECT_ID('dbo.Bills', 'U') IS NULL
 BEGIN
     CREATE TABLE Bills (
@@ -127,6 +137,11 @@ END
 GO
 
 -- Stored Procedure: sp_GetPendingDues
+SET ANSI_NULLS ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+
 CREATE OR ALTER PROCEDURE sp_GetPendingDues
 AS
 BEGIN
@@ -200,6 +215,11 @@ END
 GO
 
 -- Seed Bills
+SET ANSI_NULLS ON;
+GO
+SET QUOTED_IDENTIFIER ON;
+GO
+
 IF NOT EXISTS (SELECT 1 FROM Bills)
 BEGIN
     INSERT INTO Bills (AllocationId, BillMonth, BillYear, RentAmount, ElectricityCharges, WaterCharges, OtherCharges, Discount, DueDate, Notes)
